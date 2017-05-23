@@ -11,37 +11,28 @@
     --1orange: #F47D3B;
 }
 
-canvas #webgl {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
-}
 
 section {
     display: flex;
-    opacity: 0.80;
+    z-index: -1;
 }
 
 #start {
-    min-height: 50vh;
+    height: 100vh;
     background-color: var(--1orange);
 }
 
 #part1 {
-    min-height: 50vh;
+    height: 200vh;
     background-color: var(--1red);
 }
 
 #part2 {
-    min-height: 50vh;
+    height: 400vh;
     background-color: var(--1blue);
 }
 
 #part3 {
-    min-height: 50vh;
+    height: 200vh;
     background-color: var(--1green);
 }
