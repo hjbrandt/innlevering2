@@ -18,7 +18,7 @@ section {
 }
 
 #start {
-    height: 100vh;
+    height: 200vh;
     background-color: var(--1orange);
 }
 
@@ -28,7 +28,7 @@ section {
 }
 
 #part2 {
-    height: 400vh;
+    height: 200vh;
     background-color: var(--1blue);
 }
 
@@ -69,4 +69,10 @@ section {
 kbd {
   display: block;
   font-size: 2rem;
+}
+
+.slide-in {
+  width: 100vw;
+  height: 100vh;
+  background-color: lightgrey;
 }
