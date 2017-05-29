@@ -11,40 +11,71 @@
 </head>
 
 <body>
-  <section id="start">
+  <div id="overlay">
+    <div class="gui">
+      <div class="scroll">
+        <img id="scroll-icon" src="img/gui/mouse.svg" alt="scroll icon">
+        <p id="scroll-text">SCROLL</p>
+      </div>
+    </div>
+
     <div class="keys">
       <div data-key="81" class="key">
-        <kbd>q</kbd>
+        <video data-key="81">
+          <source src="img/keys/ambulanse.webm" type="video/webm">
+          Your browser does not support the video tag.
+        </video>
       </div>
       <div data-key="87" class="key">
-        <kbd>w</kbd>
+        <video data-key="87">
+          <source src="img/keys/brems.webm" type="video/webm">
+          Your browser does not support the video tag.
+        </video>
       </div>
       <div data-key="69" class="key">
-        <kbd>e</kbd>
+        <video data-key="69">
+          <source src="img/keys/dor.webm" type="video/webm">
+          Your browser does not support the video tag.
+        </video>
       </div>
       <div data-key="65" class="key">
-        <kbd>a</kbd>
+        <video data-key="65">
+          <source src="img/keys/bjeff.webm" type="video/webm">
+          Your browser does not support the video tag.
+        </video>
       </div>
       <div data-key="83" class="key">
-        <kbd>s</kbd>
+        <video data-key="83">
+          <source src="img/keys/krake.webm" type="video/webm">
+          Your browser does not support the video tag.
+        </video>
       </div>
       <div data-key="68" class="key">
-        <kbd>d</kbd>
+        <video data-key="68">
+          <source src="img/keys/make.webm" type="video/webm">
+          Your browser does not support the video tag.
+        </video>
       </div>
       <div data-key="90" class="key">
-        <kbd>z</kbd>
+        <video data-key="90">
+          <source src="img/keys/melding.webm" type="video/webm">
+          Your browser does not support the video tag.
+        </video>
       </div>
       <div data-key="88" class="key">
-        <kbd>x</kbd>
+        <video data-key="88">
+          <source src="img/keys/motorsykkel.webm" type="video/webm">
+          Your browser does not support the video tag.
+        </video>
       </div>
       <div data-key="67" class="key">
         <video data-key="67">
-          <source src="img/keys/tut1.webm" type="video/webm">
+          <source src="img/keys/tut.webm" type="video/webm">
           Your browser does not support the video tag.
         </video>
       </div>
     </div>
-  </section>
+  </div>
 
   <section id="part1">
     <div class="slide-in"></div>
@@ -63,15 +94,15 @@
   </section>
 
 
-  <audio data-key="81" data-type="key-sound" src="sounds/key/ambulanse.mp3"></audio>
-  <audio data-key="87" data-type="key-sound" src="sounds/key/brems.wav"></audio>
-  <audio data-key="69" data-type="key-sound" src="sounds/key/dor.wav"></audio>
-  <audio data-key="65" data-type="key-sound" src="sounds/key/hund.wav"></audio>
-  <audio data-key="83" data-type="key-sound" src="sounds/key/krake.wav"></audio>
-  <audio data-key="68" data-type="key-sound" src="sounds/key/make.wav"></audio>
-  <audio data-key="90" data-type="key-sound" src="sounds/key/melding.wav"></audio>
-  <audio data-key="88" data-type="key-sound" src="sounds/key/motorsykkel.wav"></audio>
-  <audio data-key="67" data-type="key-sound" src="sounds/key/tut.wav"></audio>
+  <audio data-key="81" src="sounds/key/ambulanse.mp3"></audio>
+  <audio data-key="87" src="sounds/key/brems.wav"></audio>
+  <audio data-key="69" src="sounds/key/dor.wav"></audio>
+  <audio data-key="65" src="sounds/key/hund.wav"></audio>
+  <audio data-key="83" src="sounds/key/krake.wav"></audio>
+  <audio data-key="68" src="sounds/key/make.wav"></audio>
+  <audio data-key="90" src="sounds/key/melding.wav"></audio>
+  <audio data-key="88" src="sounds/key/motorsykkel.wav"></audio>
+  <audio data-key="67" src="sounds/key/tut.wav"></audio>
 
   <audio id="am1" src="sounds/ambient/ambient1.mp3"></audio>
   <audio id="am2" src="sounds/ambient/ambient2.mp3"></audio>

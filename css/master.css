@@ -10,14 +10,52 @@
   --1lightgreen: #A5D9C4;
   --1orange: #F47D3B;
 }
+
+h1, h2, h3, h4, p {
+  color: #fff;
+}
+
 section {
   display: flex;
   z-index: -1;
 }
-#start {
-  height: 200vh;
-  background-color: var(--1orange);
+
+#overlay {
+  position: fixed;
+  /*display: flex;*/
+  height: 100vh;
+  border: 5px solid goldenrod;
 }
+
+/*.gui {
+  position: absolute;
+  min-height: 100vh;
+  justify-content: center;
+}*/
+
+.scroll {
+  width: 100px;
+  position: absolute;
+  bottom: 0px;
+  left: calc(50% - 50px);
+  /*border: 5px solid blue;*/
+}
+
+#scroll-icon {
+  padding: 10px;
+  margin-bottom: -40px;
+  /*border: 1px solid black;*/
+}
+
+#scroll-text {
+  bottom: 0xp;
+  left: 50%;
+  text-align: center;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
 #part1 {
   height: 200vh;
   background-color: var(--1red);
@@ -32,7 +70,6 @@ section {
 }
 .keys {
   display: flex;
-  flex: 1;
   min-height: 100vh;
   align-items: center;
   justify-content: center;
@@ -44,10 +81,7 @@ section {
 .playing {
   display: block;
 }
-kbd {
-  display: block;
-  font-size: 2rem;
-}
+
 .slide-in {
   width: 100vw;
   height: 100vh;
