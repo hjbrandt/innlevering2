@@ -8,11 +8,11 @@ $(function(){
 	  const key = document.querySelector(`.key[data-key='${e.keyCode}']`); //select key based on key class and data-key
 	  if (!audio) return; //stop the function from running if no sound
 	  audio.currentTime = 0; //rewind sound before playing
-		key.classList.add('playing'); //add 'playing' to class TODO skriv om til jquery - key.addClass('playing')
+		$(key).addClass('playing'); //add 'playing' to class TODO skriv om til jquery - key.addClass('playing')
 	  audio.play(); //play sound
 
 		audio.onended = function() {
-			key.classList.remove('playing');
+            $(key).removeClass('playing');
 		};
 
 	}
