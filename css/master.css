@@ -1,42 +1,35 @@
 :root {
-    --1red: #C72064;
-    --1violet: #92278F;
-    --1purple1: #782B87;
-    --1purple2: #662D91;
-    --1darkblue: #262262;
-    --1blue: #2B3990;
-    --1lightblue: #49769C;
-    --1green: #0DA39F;
-    --1lightgreen: #A5D9C4;
-    --1orange: #F47D3B;
+  --1red: #C72064;
+  --1violet: #92278F;
+  --1purple1: #782B87;
+  --1purple2: #662D91;
+  --1darkblue: #262262;
+  --1blue: #2B3990;
+  --1lightblue: #49769C;
+  --1green: #0DA39F;
+  --1lightgreen: #A5D9C4;
+  --1orange: #F47D3B;
 }
-
-
 section {
-    display: flex;
-    z-index: -1;
+  display: flex;
+  z-index: -1;
 }
-
 #start {
-    height: 200vh;
-    background-color: var(--1orange);
+  height: 200vh;
+  background-color: var(--1orange);
 }
-
 #part1 {
-    height: 200vh;
-    background-color: var(--1red);
+  height: 200vh;
+  background-color: var(--1red);
 }
-
 #part2 {
-    height: 200vh;
-    background-color: var(--1blue);
+  height: 200vh;
+  background-color: var(--1blue);
 }
-
 #part3 {
-    height: 200vh;
-    background-color: var(--1green);
+  height: 200vh;
+  background-color: var(--1green);
 }
-
 .keys {
   display: flex;
   flex: 1;
@@ -45,7 +38,6 @@ section {
   justify-content: center;
   width: 100vw;
 }
-
 .key {
   border: .4rem solid black;
   border-radius: .5rem;
@@ -59,18 +51,15 @@ section {
   text-shadow: 0 0 .5rem black;
   font-size: 1.5rem;
 }
-
 .playing {
   transform: scale(1.1);
   border-color: #ffc600;
   box-shadow: 0 0 1rem #ffc600;
 }
-
 kbd {
   display: block;
   font-size: 2rem;
 }
-
 .slide-in {
   width: 100vw;
   height: 100vh;
