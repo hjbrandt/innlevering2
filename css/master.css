@@ -1,7 +1,16 @@
 /*Tag selection ect.*/
+html, body {
+  margin: 0;
+}
+
 :root {
-  --1red: #C72064;
-  --1violet: #92278F;
+  --gui: #fff;
+  --background: #000;
+  --1background1: #C72064;
+  --1background2: #7f1852;
+  --2background1: #614BBD;
+  --3background: #282560;
+  --4background: #0DA39F;
   --1purple1: #782B87;
   --1purple2: #662D91;
   --1darkblue: #262262;
@@ -12,8 +21,8 @@
   --1orange: #F47D3B;
 }
 
-h1, h2, h3, h4, p {
-  color: #fff;
+h1, h2, h3, h4, p, kbd {
+  color: var(--gui);
 }
 
 section {
@@ -24,23 +33,22 @@ section {
 /*Overlay and GUI styling*/
 #overlay {
   position: fixed;
-  /*display: flex;*/
   height: 100vh;
-  border: 5px solid var(--1orange);
+  z-index: auto;
+  opacity: 1;
+
+  /*border: 5px solid var(--1orange);*/
 }
 
-/*.gui {
-  position: absolute;
-  min-height: 100vh;
-  justify-content: center;
-}*/
+/*Clock*/
+.clock-gui {
 
-/*GUI*/
+}
 
 .hand {
   width: 50%;
   height: 2px;
-  background: #fff;
+  background: var(--gui);
   position: absolute;
   top: 50%;
   transform-origin: 100%;
@@ -49,8 +57,41 @@ section {
   transition-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
+/*Keys*/
+.keys-gui {
+  display: flex;
+  height: 33.3333333vh;
+  flex-wrap: wrap;
+  align-items: center;
+
+  /*border: 2px solid black;*/
+
+}
+
+.key-box {
+  width: 33.3333333%;
+  text-align: center;
+  
+}
+
+/*Key press function*/
+.keys {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+}
+.key {
+  display: none;
+}
+.playing {
+  display: block;
+}
+
+/*Scroll*/
 .scroll-gui {
-  width: 100px;
+  min-width: 100px;
   position: absolute;
   bottom: 0px;
   left: calc(50% - 50px);
@@ -73,41 +114,19 @@ section {
 
 /*Scene length and setting*/
 #scene1 {
-  height: 200vh;
-  background-color: var(--1red);
+  height: 100vh;
+  background: linear-gradient(var(--1background1), var(--1background2));
 }
 #scene2 {
-  height: 200vh;
-  background-color: var(--1blue);
-}
-#scene3 {
-  height: 200vh;
-  background-color: var(--1green);
-}
-#scene4 {
-  height: 200vh;
-  background-color: var(--1green);
-}
-
-/*Key press*/
-.keys {
-  display: flex;
-  min-height: 100vh;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-}
-.key {
-  display: none;
-}
-.playing {
-  display: block;
+  height: 100vh;
+  background: linear-gradient(var(--1background2), var(--2background1));
 }
 
 /*Scene switching styling and function*/
 .slide-in {
+  display: none;
   width: 100vw;
   height: 100vh;
-  background-color: var(--1lightblue);
+  background: var(--1lightblue);
   border: 3px solid var(--1lightgreen);
 }

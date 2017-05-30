@@ -1,7 +1,16 @@
-$(function () {
+$(function() {
   'use strict'
 
-  console.log('scenes.js is loaded')
+  console.log('scenes.js is loaded');
+
+  $(function autoPilot() {
+    // body...
+  });
+
+  const now = Date();
+
+  console.log(now);
+
 
     // function scrollEvent () {
     //     var checkScene = 1;
@@ -19,4 +28,4 @@ $(function () {
 
     // window.addEventListener("scroll", scrollEvent);
     // scrollEvent();
-})
+});

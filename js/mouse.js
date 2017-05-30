@@ -1,4 +1,8 @@
+$(function() {
+	'use strict'
+	console.log('mouse.js is loaded');
 
-}
+	hero.addEventListener('mousemove', body);
 
-hero.addEventListener('mousemove', shadow)
+});
+
