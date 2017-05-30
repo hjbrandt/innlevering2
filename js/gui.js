@@ -2,12 +2,12 @@ $(function() {
   'use strict';
   console.log('gui.js is loaded');
 
-// CLOCK
+  // CLOCK
   const secondHand = document.querySelector('.second-hand'); // TODO skriv om til jquery?
   const minuteHand = document.querySelector('.minutes-hand'); // TODO skriv om til jquery?
   const hourHand = document.querySelector('.hour-hand'); // TODO skriv om til jquery?
 
-  function setDate () {
+  function setDate() {
     const now = new Date();
 
     const seconds = now.getSeconds();
@@ -24,46 +24,45 @@ $(function() {
     hourHand.style.transform = `rotate(${hoursDegrees}deg)`; // TODO skriv om til jquery?
   }
   setInterval(setDate, 1000);
-// END CLOCK
+  // END CLOCK
 
-// Mouse move function
+  // Mouse move function
   const inputs = document.querySelectorAll('#overlay');
 
   function mouseMove() {
     console.log(this.value);
   }
 
-// Play key and show animation
-  function playKey (e) {
+  // Play key and show animation
+  function playKey(e) {
 
     const key = document.querySelector(`.key[data-key='${e.keyCode}']`); // select key based on key class and data-key
     const audio = document.querySelector(`audio[data-key='${e.keyCode}']`); // select audio element based on data-key
-    const video = document.querySelector(`video[data-key='${e.keyCode}']`);  // TODO skriv om til jquery?
+    const video = document.querySelector(`video[data-key='${e.keyCode}']`); // TODO skriv om til jquery?
 
-	  if (!video || !audio) return; // stop the function from running if no sound or video on key
-	  audio.currentTime = 0; // rewind before playing
+    if (!video || !audio) return; // stop the function from running if no sound or video on key
+    audio.currentTime = 0; // rewind before playing
     video.currentTime = 0;
     $(key).addClass('playing'); // adds display block
-	  audio.play();
+    audio.play();
     video.play();
 
-    audio.onended = function () {
+    audio.onended = function() {
       $(key).removeClass('playing'); // removes display block
     };
   }
 
-  function removeKey (e) {
-	  
-  }
-// END Play key
+  function removeKey(e) {
 
-// Event listeners
+  }
+  // END Play key
+
+  // Event listeners
   inputs.forEach(input => input.addEventListener('mouse', mouseMove));
 
   const keys = document.querySelectorAll('.key'); // TODO skriv om til jquery?
   keys.forEach(key => key.addEventListener('transitionend', removeKey));
 
   window.addEventListener('keydown', playKey);
-// END Event linsteners
-
+  // END Event linsteners
 });

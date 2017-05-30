@@ -2,19 +2,19 @@
 <html>
 
 <head>
-    <!-- meta tags -->
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
-    <link rel="stylesheet" href="css/master.css">
-    <!-- Title and favicon -->
-    <title>DRØMMER</title>
+  <!-- meta tags -->
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+  <link rel="stylesheet" href="css/master.css">
+  <!-- Title and favicon -->
+  <title>DRØMMER</title>
 </head>
 
 <body>
-<!-- START Fixed overlay -->
+  <!-- START Fixed overlay -->
   <div id="overlay">
     <!-- Absolute GUI -->
     <div class="gui">
@@ -24,114 +24,99 @@
           <div class="hand minutes-hand"></div>
           <div class="hand second-hand"></div>
         </div>
-      </div> 
-      
+      </div>
       <div class="keys-gui">
         <div class="key-box">
-        <kbd>q</kbd>
+          <kbd>q</kbd>
         </div>
         <div class="key-box">
-        <kbd>w</kbd>
+          <kbd>w</kbd>
         </div>
         <div class="key-box">
-        <kbd>e</kbd>
+          <kbd>e</kbd>
         </div>
         <div class="key-box">
-        <kbd>a</kbd>
+          <kbd>a</kbd>
         </div>
         <div class="key-box">
-        <kbd>s</kbd>
+          <kbd>s</kbd>
         </div>
         <div class="key-box">
-        <kbd>d</kbd>
+          <kbd>d</kbd>
         </div>
         <div class="key-box">
-        <kbd>z</kbd>
+          <kbd>z</kbd>
         </div>
         <div class="key-box">
-        <kbd>x</kbd>
+          <kbd>x</kbd>
         </div>
         <div class="key-box">
-        <kbd>c</kbd>
+          <kbd>c</kbd>
         </div>
       </div>
-
       <div class="scroll-gui">
         <img id="scroll-icon" src="img/gui/mouse.svg" alt="scroll icon">
         <p id="scroll-text">SCROLL</p>
       </div>
-      
     </div>
     <!-- Absolute Keys with percentages-->
     <div class="keys">
       <div data-key="81" class="key">
         <video data-key="81">
-          <source src="img/keys/ambulanse.webm" type="video/webm">
-          Your browser does not support the video tag.
+          <source src="img/keys/ambulanse.webm" type="video/webm"> Your browser does not support the video tag.
         </video>
       </div>
       <div data-key="87" class="key">
         <video data-key="87">
-          <source src="img/keys/brems.webm" type="video/webm">
-          Your browser does not support the video tag.
+          <source src="img/keys/brems.webm" type="video/webm"> Your browser does not support the video tag.
         </video>
       </div>
       <div data-key="69" class="key">
         <video data-key="69">
-          <source src="img/keys/dor.webm" type="video/webm">
-          Your browser does not support the video tag.
+          <source src="img/keys/dor.webm" type="video/webm"> Your browser does not support the video tag.
         </video>
       </div>
       <div data-key="65" class="key">
         <video data-key="65">
-          <source src="img/keys/bjeff.webm" type="video/webm">
-          Your browser does not support the video tag.
+          <source src="img/keys/bjeff.webm" type="video/webm"> Your browser does not support the video tag.
         </video>
       </div>
       <div data-key="83" class="key">
         <video data-key="83">
-          <source src="img/keys/krake.webm" type="video/webm">
-          Your browser does not support the video tag.
+          <source src="img/keys/krake.webm" type="video/webm"> Your browser does not support the video tag.
         </video>
       </div>
       <div data-key="68" class="key">
         <video data-key="68">
-          <source src="img/keys/make.webm" type="video/webm">
-          Your browser does not support the video tag.
+          <source src="img/keys/make.webm" type="video/webm"> Your browser does not support the video tag.
         </video>
       </div>
       <div data-key="90" class="key">
         <video data-key="90">
-          <source src="img/keys/melding.webm" type="video/webm">
-          Your browser does not support the video tag.
+          <source src="img/keys/melding.webm" type="video/webm"> Your browser does not support the video tag.
         </video>
       </div>
       <div data-key="88" class="key">
         <video data-key="88">
-          <source src="img/keys/motorsykkel.webm" type="video/webm">
-          Your browser does not support the video tag.
+          <source src="img/keys/motorsykkel.webm" type="video/webm"> Your browser does not support the video tag.
         </video>
       </div>
       <div data-key="67" class="key">
         <video data-key="67">
-          <source src="img/keys/tut.webm" type="video/webm">
-          Your browser does not support the video tag.
+          <source src="img/keys/tut.webm" type="video/webm"> Your browser does not support the video tag.
         </video>
       </div>
     </div>
   </div>
   <!-- END fixed overlay -->
-
-<!-- Scenes -->
+  <!-- Scenes -->
   <section id="scene1">
     <div class="slide-in"></div>
   </section>
-
   <section id="scene2">
     <div class="slide-in"></div>
   </section>
-
-<!-- Audio files -->
+  <!-- Audio files -->
   <audio data-key="81" src="sounds/key/ambulanse.mp3"></audio>
   <audio data-key="87" src="sounds/key/brems.wav"></audio>
   <audio data-key="69" src="sounds/key/dor.wav"></audio>
@@ -141,16 +126,13 @@
   <audio data-key="90" src="sounds/key/melding.wav"></audio>
   <audio data-key="88" src="sounds/key/motorsykkel.wav"></audio>
   <audio data-key="67" src="sounds/key/tut.wav"></audio>
-
   <!-- Video files -->
   <audio id="am1" src="sounds/ambient/ambient1.mp3"></audio>
   <audio id="am2" src="sounds/ambient/ambient2.mp3"></audio>
-
-<!-- JavaScripts -->
+  <!-- JavaScripts -->
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
   <script src="js/scenes.js"></script>
   <script src="js/gui.js"></script>
-
 </body>
 
 </html>

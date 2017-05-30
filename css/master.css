@@ -1,5 +1,7 @@
 /*Tag selection ect.*/
-html, body {
+
+html,
+body {
   margin: 0;
 }
 
@@ -21,7 +23,12 @@ html, body {
   --1orange: #F47D3B;
 }
 
-h1, h2, h3, h4, p, kbd {
+h1,
+h2,
+h3,
+h4,
+p,
+kbd {
   color: var(--gui);
 }
 
@@ -30,20 +37,20 @@ section {
   z-index: -1;
 }
 
+
 /*Overlay and GUI styling*/
+
 #overlay {
   position: fixed;
   height: 100vh;
   z-index: auto;
   opacity: 1;
-
-  /*border: 5px solid var(--1orange);*/
 }
+
 
 /*Clock*/
-.clock-gui {
 
-}
+.clock-gui {}
 
 .hand {
   width: 50%;
@@ -57,24 +64,24 @@ section {
   transition-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
+
 /*Keys*/
+
 .keys-gui {
   display: flex;
   height: 33.3333333vh;
   flex-wrap: wrap;
   align-items: center;
-
-  /*border: 2px solid black;*/
-
 }
 
 .key-box {
   width: 33.3333333%;
   text-align: center;
-  
 }
 
+
 /*Key press function*/
+
 .keys {
   display: flex;
   min-height: 100vh;
@@ -82,14 +89,18 @@ section {
   justify-content: center;
   width: 100vw;
 }
+
 .key {
   display: none;
 }
+
 .playing {
   display: block;
 }
 
+
 /*Scroll*/
+
 .scroll-gui {
   min-width: 100px;
   position: absolute;
@@ -110,19 +121,26 @@ section {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
+
+
 /*END GUI*/
 
+
 /*Scene length and setting*/
+
 #scene1 {
   height: 100vh;
   background: linear-gradient(var(--1background1), var(--1background2));
 }
+
 #scene2 {
   height: 100vh;
   background: linear-gradient(var(--1background2), var(--2background1));
 }
 
+
 /*Scene switching styling and function*/
+
 .slide-in {
   display: none;
   width: 100vw;

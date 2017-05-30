@@ -1,5 +1,5 @@
 $(function() {
-	'use strict'
+	'use strict';
 	console.log('mouse.js is loaded');
 
 	hero.addEventListener('mousemove', body);
