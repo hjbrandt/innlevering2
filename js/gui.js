@@ -1,5 +1,5 @@
 $(function() {
-  'use strict'
+  'use strict';
   console.log('gui.js is loaded');
 
 // CLOCK
@@ -43,14 +43,13 @@ $(function() {
 	  if (!video || !audio) return; // stop the function from running if no sound or video on key
 	  audio.currentTime = 0; // rewind before playing
     video.currentTime = 0;
-    $(key).addClass
     $(key).addClass('playing'); // adds display block
 	  audio.play();
     video.play();
 
     audio.onended = function () {
       $(key).removeClass('playing'); // removes display block
-    }
+    };
   }
 
   function removeKey (e) {
