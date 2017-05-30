@@ -54,7 +54,7 @@ $(function() {
   }
 
   function removeKey (e) {
-	  if (e.propertyName !== 'transform') return;
+	  
   }
 // END Play key
 
