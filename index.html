@@ -2,23 +2,36 @@
 <html>
 
 <head>
+    <!-- meta tags -->
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
     <link rel="stylesheet" href="css/master.css">
+    <!-- Title and favicon -->
     <title>DRØMMER</title>
 </head>
 
 <body>
+<!-- Fixed overlay -->
   <div id="overlay">
+    <!-- Absolute GUI -->
     <div class="gui">
-      <div class="scroll">
+      <div class="clock">
+        <div class="clock-face">
+          <div class="hand hour-hand"></div>
+          <div class="hand minutes-hand"></div>
+          <div class="hand second-hand"></div>
+        </div>
+      </div>
+      <div class="scroll-gui">
         <img id="scroll-icon" src="img/gui/mouse.svg" alt="scroll icon">
         <p id="scroll-text">SCROLL</p>
       </div>
+      
     </div>
-
+    <!-- Absolute Keys with percentages-->
     <div class="keys">
       <div data-key="81" class="key">
         <video data-key="81">
@@ -76,24 +89,26 @@
       </div>
     </div>
   </div>
+  <!-- END fixed overlay -->
 
-  <section id="part1">
+<!-- Scenes -->
+  <section id="scene1">
     <div class="slide-in"></div>
   </section>
 
-  <section id="part2">
+  <section id="scene2">
     <div class="slide-in"></div>
   </section>
 
-  <section id="part3">
+  <section id="scene3">
     <div class="slide-in"></div>
   </section>
 
-  <section id="part4">
-      <h2>end here</h2>
+  <section id="scene4">
+    <div class="slide-in"></div>  
   </section>
 
-
+<!-- Audio files -->
   <audio data-key="81" src="sounds/key/ambulanse.mp3"></audio>
   <audio data-key="87" src="sounds/key/brems.wav"></audio>
   <audio data-key="69" src="sounds/key/dor.wav"></audio>
@@ -104,12 +119,14 @@
   <audio data-key="88" src="sounds/key/motorsykkel.wav"></audio>
   <audio data-key="67" src="sounds/key/tut.wav"></audio>
 
+  <!-- Video files -->
   <audio id="am1" src="sounds/ambient/ambient1.mp3"></audio>
   <audio id="am2" src="sounds/ambient/ambient2.mp3"></audio>
 
+<!-- JavaScripts -->
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
   <script src="js/scenes.js"></script>
-  <script src="js/keys.js"></script>
+  <script src="js/gui.js"></script>
 
 </body>
 

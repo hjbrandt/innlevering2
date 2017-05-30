@@ -1,3 +1,4 @@
+/*Tag selection ect.*/
 :root {
   --1red: #C72064;
   --1violet: #92278F;
@@ -20,11 +21,12 @@ section {
   z-index: -1;
 }
 
+/*Overlay and GUI styling*/
 #overlay {
   position: fixed;
   /*display: flex;*/
   height: 100vh;
-  border: 5px solid goldenrod;
+  border: 5px solid var(--1orange);
 }
 
 /*.gui {
@@ -33,18 +35,30 @@ section {
   justify-content: center;
 }*/
 
-.scroll {
+/*GUI*/
+
+.hand {
+  width: 50%;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.scroll-gui {
   width: 100px;
   position: absolute;
   bottom: 0px;
   left: calc(50% - 50px);
-  /*border: 5px solid blue;*/
 }
 
 #scroll-icon {
   padding: 10px;
   margin-bottom: -40px;
-  /*border: 1px solid black;*/
 }
 
 #scroll-text {
@@ -55,19 +69,27 @@ section {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
+/*END GUI*/
 
-#part1 {
+/*Scene length and setting*/
+#scene1 {
   height: 200vh;
   background-color: var(--1red);
 }
-#part2 {
+#scene2 {
   height: 200vh;
   background-color: var(--1blue);
 }
-#part3 {
+#scene3 {
   height: 200vh;
   background-color: var(--1green);
 }
+#scene4 {
+  height: 200vh;
+  background-color: var(--1green);
+}
+
+/*Key press*/
 .keys {
   display: flex;
   min-height: 100vh;
@@ -82,8 +104,10 @@ section {
   display: block;
 }
 
+/*Scene switching styling and function*/
 .slide-in {
   width: 100vw;
   height: 100vh;
-  background-color: lightgrey;
+  background-color: var(--1lightblue);
+  border: 3px solid var(--1lightgreen);
 }

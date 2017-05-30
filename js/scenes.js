@@ -1,31 +1,22 @@
 $(function () {
   'use strict'
 
-  console.log('scenes.js is loaded');
-
-
-
-
-
+  console.log('scenes.js is loaded')
 
     // function scrollEvent () {
-    //     var currentScene = 1;
+    //     var checkScene = 1;
 
     //     $( window ).scroll(function() {
     //         var viewportHeight = $(window).height();
     //         var container = $('body');
-    //         var scrollTo = $('#part'+currentScene);
+    //         var scrollTo = $('#scene'+checkScene);
     //         container.animate({
     //             scrollTop: scrollTo.offset().top - container.offset().top + container.scrollTop()
     //         });
-    //         currentScene++;
+    //         checkScene++;
     //     });
     // };
-    
+
     // window.addEventListener("scroll", scrollEvent);
     // scrollEvent();
-
-});
-
-
-
+})
