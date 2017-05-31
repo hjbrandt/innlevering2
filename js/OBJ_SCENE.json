@@ -52,4 +52,4 @@ var scene4 = {
 	"keyZ" : "media/img/key4/melding.webm",
 	"keyX" : "media/img/key4/motorsykkel.webm",
 	"keyC" : "media/img/key4/tut.webm",
-}
+};

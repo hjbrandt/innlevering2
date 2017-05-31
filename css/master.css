@@ -7,6 +7,7 @@ body {
 }
 
 :root {
+  /*COLORS*/
   --gui: #fff;
   --background: #000;
   --1background1: #C72064;
@@ -22,6 +23,9 @@ body {
   --1green: #0DA39F;
   --1lightgreen: #A5D9C4;
   --1orange: #F47D3B;
+
+  /*ATTRIBUTES*/
+  --sceneheight: 200vh;
 }
 
 h1,
@@ -151,13 +155,26 @@ section {
 
 /*Scene length and setting*/
 
-#scene1 {
-  height: 200vh;
+.scene {
+}
+
+#scene-1 {
+  height: var(--sceneheight);
   background: linear-gradient(var(--1background1), var(--1background2));
 }
 
-#scene4 {
-  height: 200vh;
+#scene-2 {
+  height: var(--sceneheight);
+
+}
+
+#scene-3 {
+  height: var(--sceneheight);
+
+}
+
+#scene-4 {
+  height: var(--sceneheight);
   background: linear-gradient(var(--1background2), var(--2background1));
 }
 
