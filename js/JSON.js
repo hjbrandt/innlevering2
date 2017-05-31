@@ -1,6 +1,6 @@
 var scene1 = {
-	"sound" : "media/audio/ambient1.mp3",
-	"animation" : "",
+	"sound" : "media/audio/sound1.mp3",
+	"animation" : "media/img/scene1.webm",
 	"keyQ" : "media/img/key1/ambulanse.webm",
 	"keyW" : "media/img/key1/brems.webm",
 	"keyE" : "media/img/key1/dor.webm",
@@ -13,8 +13,8 @@ var scene1 = {
 };
 
 var scene2 = {
-	"sound" : "media/audio/ambient2.mp3",
-	"animation" : "",
+	"sound" : "media/audio/sound2.mp3",
+	"animation" : "media/img/scene2.webm",
 	"keyQ" : "media/img/key2/ambulanse.webm",
 	"keyW" : "media/img/key2/brems.webm",
 	"keyE" : "media/img/key2/dor.webm",
@@ -27,8 +27,8 @@ var scene2 = {
 };
 
 var scene3 = {
-	"sound" : "media/audio/ambient3.mp3",
-	"animation" : "",
+	"sound" : "media/audio/sound3.mp3",
+	"animation" : "media/img/scene3.webm",
 	"keyQ" : "media/img/key3/ambulanse.webm",
 	"keyW" : "media/img/key3/brems.webm",
 	"keyE" : "media/img/key3/dor.webm",
@@ -41,8 +41,8 @@ var scene3 = {
 };
 
 var scene4 = {
-	"sound" : "media/audio/ambient4.mp3",
-	"animation" : "",
+	"sound" : "media/audio/sound4.mp3",
+	"animation" : "media/img/scene4.webm",
 	"keyQ" : "media/img/key4/ambulanse.webm",
 	"keyW" : "media/img/key4/brems.webm",
 	"keyE" : "media/img/key4/dor.webm",

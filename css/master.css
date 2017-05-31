@@ -152,12 +152,12 @@ section {
 /*Scene length and setting*/
 
 #scene1 {
-  height: 100vh;
+  height: 200vh;
   background: linear-gradient(var(--1background1), var(--1background2));
 }
 
 #scene4 {
-  height: 100vh;
+  height: 200vh;
   background: linear-gradient(var(--1background2), var(--2background1));
 }
 
