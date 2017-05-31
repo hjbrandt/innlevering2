@@ -1,15 +1,15 @@
 $(function() {
   'use strict';
-
   console.log('scenes.js is loaded');
 
-  $(function autoPilot() {
-    // body...
-  });
 
-  const now = Date();
+  // $(function autoPilot() {
+  //   // body...
+  // });
 
-  console.log(now);
+  // var now = Date();
+
+  // console.log(now);
 
 
     // function scrollEvent () {

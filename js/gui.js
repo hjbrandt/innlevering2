@@ -26,8 +26,6 @@ $(function() {
   setInterval(setDate, 1000);
   // END CLOCK
 
-  // Mouse move function
-  var inputs = document.querySelectorAll('body');
 
   // Play key and show animation
   function playKey(e) {
@@ -36,27 +34,25 @@ $(function() {
     var audio = document.querySelector(`audio[data-key='${e.keyCode}']`);
     var video = document.querySelector(`video[data-key='${e.keyCode}']`);
 
-    if (!video || !audio) return; // stop the function from running if no sound or video on key
+    if (!audio || !video) return; // stop the function from running if no audio or video on key
     audio.currentTime = 0; // rewind before playing
-    video.currentTime = 0;
-    $(key).addClass('playing'); // adds display block
     audio.play();
+
+    video.currentTime = 0;
     video.play();
+
+    $(key).addClass('playing'); // adds display block
 
     audio.onended = function() {
       $(key).removeClass('playing'); // removes display block
     };
   }
 
-  function removeKey(e) {
-
-  }
   // END Play key
 
   // Event listeners
   var keys = document.querySelectorAll('.key');
-  keys.forEach(key => key.addEventListener('transitionend', removeKey));
-
+  keys.forEach(key => key.addEventListener('transitionend', playKey));
   window.addEventListener('keydown', playKey);
   // END Event linsteners
 });
