@@ -91,7 +91,6 @@ section {
   height: 100vh;
   flex-wrap: wrap;
   align-items: center;
-  border: 2px solid var(--gui);
 }
 
 .key-box {
@@ -117,8 +116,6 @@ section {
 .key {
   width: 30%;
   display: none;
-  border: 2px solid var(--gui);
-
 }
 
 .playing {

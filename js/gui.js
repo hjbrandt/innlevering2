@@ -52,7 +52,10 @@ $(function() {
 
   // Event listeners
   var keys = document.querySelectorAll('.key');
-  keys.forEach(key => key.addEventListener('transitionend', playKey));
+  // keys.forEach(key => key.addEventListener('transitionend', playKey));
+  keys.forEach(function(key) {
+    key.addEventListener('', playKey);
+  });
   window.addEventListener('keydown', playKey);
   // END Event linsteners
 });

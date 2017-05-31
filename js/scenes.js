@@ -2,10 +2,9 @@ $(function() {
   'use strict';
   console.log('scenes.js is loaded');
 
-
-  // $(function autoPilot() {
-  //   // body...
-  // });
+  function getScene() {
+    
+  }
 
   // var now = Date();
 

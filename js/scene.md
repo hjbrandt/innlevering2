@@ -1,9 +1,9 @@
 SCENE MARKDOWN
 
 get position
-	convert position to scene
 	
 set scene 1-4
+	based on position
 
 get audio from JSON
 	load scene sound
