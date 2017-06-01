@@ -1,8 +1,6 @@
-$(function () {
-	'use strict';
-	console.log("scene.js is loaded");
-
-	var scenes =[
+var SCENE_MODULE = $(function() {
+	
+	var scenesJSON =[
 
 		{
 			"scene" : "1",
@@ -61,13 +59,25 @@ $(function () {
 			"keyC" : "media/img/key4/tut.webm"
 		}
 	];
-	// END scene JSON
 
-	// var getScene = scenes.filter(function(scene) {
-	// 	if(scroll. >= 1000) {
-	// 		console.log("hallo");
-	// 	}
-		// END getScene...
-	// });
-	// END ready function...
+	function getScene() {
+
+		if($('#scene').hasClass('scene-1')) {
+			return scenesJSON[0];
+		}
+		if($('#scene').hasClass('scene-2')) {
+			return scenesJSON[1];
+		}
+		if($('#scene').hasClass('scene-3')) {
+			return scenesJSON[2];
+		}
+		if($('#scene').hasClass('scene-4')) {
+			return scenesJSON[3];
+		}
+
+		return {
+			getScene:getScene
+		};
+	} // END getScene
+
 });

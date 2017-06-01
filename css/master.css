@@ -3,18 +3,21 @@
 html,
 body {
   margin: 0;
-  background-color: var(--1background1);
+  background-color: var(--1lightblue);
 }
 
 :root {
   /*COLORS*/
   --gui: #fff;
   --background: #000;
-  --1background1: #C72064;
-  --1background2: #7f1852;
-  --2background1: #614BBD;
-  --3background: #282560;
-  --4background: #0DA39F;
+  --1grad1: #C72064;
+  --1grad2: #7f1852;
+  --2grad1: #7f1852;
+  --2grad2: #614BBD;
+  --3grad1: #614BBD;
+  --3grad2: #282560;
+  --4grad1: #282560;
+  --4grad2: #0DA39F;
   --1purple1: #782B87;
   --1purple2: #662D91;
   --1darkblue: #262262;
@@ -25,7 +28,7 @@ body {
   --1orange: #F47D3B;
 
   /*ATTRIBUTES*/
-  --sceneheight: 200vh;
+  --sceneheight: 800vh;
 }
 
 h1,
@@ -156,26 +159,23 @@ section {
 /*Scene length and setting*/
 
 .scene {
+  height: var(--sceneheight);
 }
 
-#scene-1 {
-  height: var(--sceneheight);
-  background: linear-gradient(var(--1background1), var(--1background2));
+.scene-1 {
+  background: linear-gradient(var(--1grad1), var(--1grad2));
 }
 
-#scene-2 {
-  height: var(--sceneheight);
-
+.scene-2 {
+  background: linear-gradient(var(--2grad1), var(--2grad2));
 }
 
-#scene-3 {
-  height: var(--sceneheight);
-
+.scene-3 {
+  background: linear-gradient(var(--3grad1), var(--3grad2));
 }
 
-#scene-4 {
-  height: var(--sceneheight);
-  background: linear-gradient(var(--1background2), var(--2background1));
+.scene-4 {
+  background: linear-gradient(var(--4grad1), var(--4grad2));
 }
 
 
