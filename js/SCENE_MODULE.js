@@ -1,4 +1,4 @@
-var SCENE_MODULE = $(function() {
+var SCENE_MODULE = (function() {
 	
 	var scenesJSON =[
 

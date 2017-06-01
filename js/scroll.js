@@ -1,5 +1,6 @@
 $(function() {
 	'use strict';
+	SCENE_APP.init();
 
 	// SCROLL FUNCTION
 	var total = 0;
@@ -48,18 +49,17 @@ $(function() {
 
 	function getScene() {
 
-
-		if(total >= 100 && total < 200) {
+		if(total >= 200 && total < 400) {
 			$('#scene')
 				.removeClass("scene-1")
 				.addClass("scene-2");
 		}
-		if(total >= 200 && total < 300) {
+		if(total >= 400 && total < 600) {
 			$('#scene')
 				.removeClass("scene-2")
 				.addClass("scene-3");
 		}
-		if(total >= 300 && total < 1000) {
+		if(total >= 600 && total < 800) {
 			$('#scene')
 				.removeClass("scene-3")
 				.addClass("scene-4");
