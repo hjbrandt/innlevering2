@@ -2,8 +2,6 @@ var OBJECT_KEY = $(function() {
   'use strict';
   console.log('OBJECT_KEY.js is loaded');
 
-  var noisePath = "media/audio/key/";
-
   $('body').on('keydown', function(e) {
 
     var key = e.keyCode;

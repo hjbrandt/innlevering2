@@ -87,6 +87,12 @@ section {
   transition-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
+.scene-video {
+  position: fixed;
+  left: calc(50% - 200px);
+  top: calc(50% - 200px);
+  width: 400px;
+}
 
 /*Keys*/
 

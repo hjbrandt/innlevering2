@@ -76,13 +76,5 @@ $(function() {
 		}
 
 	} // END getScene
-
-	// function moveUp() {
-	// 	if(move == 1) {
-
-	// 	}
-	// }
-
 	
-
 });
