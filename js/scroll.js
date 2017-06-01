@@ -27,7 +27,7 @@ $(function() {
 
 			newPosition = position;
 			getScene();
-			// moveUp();g
+			// moveUp();
 			console.log("you are scrolling UP");
 
 		} else {
@@ -49,26 +49,30 @@ $(function() {
 
 	function getScene() {
 
-		if(total >= 200 && total < 400) {
+		if(total = 400) {
 			$('#scene')
 				.removeClass("scene-1")
 				.addClass("scene-2");
+				SCENE_APP.init();
 		}
-		if(total >= 400 && total < 600) {
+		if(total = 600) {
 			$('#scene')
 				.removeClass("scene-2")
 				.addClass("scene-3");
+				SCENE_APP.init();
 		}
-		if(total >= 600 && total < 800) {
+		if(total = 800) {
 			$('#scene')
 				.removeClass("scene-3")
 				.addClass("scene-4");
+				SCENE_APP.init();
 		}
-		if(total >= 1000) {
+		if(total = 1000) {
 			$('#scene')
 				.removeClass("scene-4")
 				.addClass("scene-1");
 				total = 0;
+				SCENE_APP.init();
 		}
 
 	} // END getScene

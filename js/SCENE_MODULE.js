@@ -1,5 +1,5 @@
 var SCENE_MODULE = (function() {
-	
+
 	var scenesJSON =[
 
 		{
@@ -60,7 +60,7 @@ var SCENE_MODULE = (function() {
 		}
 	];
 
-	function getScene() {
+	var getScene = function() {
 
 		if($('#scene').hasClass('scene-1')) {
 			return scenesJSON[0];
@@ -74,10 +74,11 @@ var SCENE_MODULE = (function() {
 		if($('#scene').hasClass('scene-4')) {
 			return scenesJSON[3];
 		}
+	}; // END getScene
 
 		return {
 			getScene:getScene
-		};
-	} // END getScene
+		};// END getScene
 
-});
+
+}());
