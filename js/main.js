@@ -55,10 +55,12 @@ $(function() {
     function removeTransition(e) {
       if (e.propertyName !== 'transform')
         return;
-      e.target.classList.remove('active'); //TODO fix feilmelding "Cannot read property"
+      e.target.classList.remove('active');
     }
 
     var press = document.querySelector(`.key-press[data-key='${e.keyCode}']`);
+
+    if (!press) return; // stop if no value
 
     press.classList.add('active');
 
