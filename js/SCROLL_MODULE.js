@@ -8,9 +8,11 @@ var SCROLL_MODULE = (function(){
 	var scroll = function() {
 
 	$(window).on('scroll', function() {
-		
+
 		total += increment;
 		var position = window.scrollY;
+
+		console.log(total);
 
 		if (position < newPosition) {
 
@@ -23,15 +25,10 @@ var SCROLL_MODULE = (function(){
 			console.log("you are scrolling DOWN");
 		}
 
-		// console.log(scrollMove);
-		// console.log(scene1);
-		console.log(total);
-		console.log(position);
-		
 		});
 
 		var getScroll = function(){
-			console.log(scroll);
+
 			return scroll();
 		};
 

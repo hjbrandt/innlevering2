@@ -10,6 +10,7 @@ $(function() {
 
     if (!audio || !video) return; // stop the function from running if no audio or video on key
     audio.currentTime = 0; // rewind before playing
+    audio.volume = 0.5;
     audio.play();
 
     video.currentTime = 0;

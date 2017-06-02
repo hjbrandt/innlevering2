@@ -3,30 +3,21 @@
 html,
 body {
   margin: 0;
-  background-color: var(--1lightblue);
+  background-color: var(--background);
 }
 
 :root {
   /*COLORS*/
   --gui: #fff;
-  --background: #000;
+  --background: #5d5d5d;
   --1grad1: #C72064;
-  --1grad2: #7f1852;
-  --2grad1: #7f1852;
-  --2grad2: #614BBD;
-  --3grad1: #614BBD;
-  --3grad2: #282560;
-  --4grad1: #282560;
-  --4grad2: #0DA39F;
-  --1purple1: #782B87;
-  --1purple2: #662D91;
-  --1darkblue: #262262;
-  --1blue: #2B3990;
-  --1lightblue: #49769C;
-  --1green: #0DA39F;
-  --1lightgreen: #A5D9C4;
-  --1orange: #F47D3B;
-
+  --1grad2: #6350d3;
+  --2grad1: #6350d3;
+  --2grad2: #282560;
+  --3grad1: #282560;
+  --3grad2: #FBC5BB;
+  --4grad1: #FBC5BB;
+  --4grad2: #E9edbc;
   /*ATTRIBUTES*/
   --sceneheight: 800vh;
 }
@@ -89,9 +80,11 @@ section {
 
 .scene-video {
   position: fixed;
-  left: calc(50% - 200px);
-  top: calc(50% - 200px);
-  width: 400px;
+  width: 70vw;
+  height: 70vh;
+  left: calc(50% - 35vw);
+  top: calc(50% - 35vh);
+  display: none;
 }
 
 /*Keys*/
