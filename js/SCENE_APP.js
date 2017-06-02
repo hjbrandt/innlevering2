@@ -5,14 +5,23 @@ var SCENE_APP = {
 	$video: null,
 	$animation: null,
 
+	$videoA: null,
 	$keyA: null,
+	$videoS: null,
 	$keyS: null,
+	$videoD: null,
 	$keyD: null,
+	$videoF: null,
 	$keyF: null,
+	$videoG: null,
 	$keyG: null,
+	$videoH: null,
 	$keyH: null,
+	$videoJ: null,
 	$keyJ: null,
+	$videoK: null,
 	$keyK: null,
+	$videoL: null,
 	$keyL: null,
 
 
@@ -25,15 +34,26 @@ var SCENE_APP = {
 			SA.$video = $('#video');
 			SA.$animation = $('#animation');
 
-			SA.$keyA = $('#a');
-			SA.$keyS = $('#s');
-			SA.$keyD = $('#d');
-			SA.$keyF = $('#f');
-			SA.$keyG = $('#g');
-			SA.$keyH = $('#h');
-			SA.$keyJ = $('#j');
-			SA.$keyK = $('#k');
-			SA.$keyL = $('#l');
+			SA.$videoA = $('#videoA');
+			SA.$keyA = $('#keyA');
+			SA.$videoS = $('#videoS');
+			SA.$keyS = $('#keyS');
+			SA.$videoD = $('#videoD');
+			SA.$keyD = $('#keyD');
+			SA.$videoF = $('#videoF');
+			SA.$keyF = $('#keyF');
+			SA.$videoG = $('#videoG');
+			SA.$keyG = $('#keyG');
+			SA.$videoH = $('#videoH');
+			SA.$keyH = $('#keyH');
+			SA.$videoJ = $('#videoJ');
+			SA.$keyJ = $('#keyJ');
+			SA.$videoK = $('#videoK');
+			SA.$keyK = $('#keyK');
+			SA.$videoL = $('#videoL');
+			SA.$keyL = $('#keyL');
+
+
 
 		}();
 
@@ -45,15 +65,6 @@ var SCENE_APP = {
 			SA.$animationSource = SCENE_MODULE.getScene().animation;
 			animation = SA.$animationSource;
 			SA.$animation.attr('src', animation);
-
-			SA.$audio[0].load();
-			SA.$video[0].load();
-
-			SA.$audio[0].currentTime = 0;
-			SA.$video[0].currentTime = 0;
-
-			SA.$audio[0].play();
-			SA.$video[0].play();
 
 			SA.$keyASource = SCENE_MODULE.getScene().keyA;
 			keyA = SA.$keyASource;
@@ -90,6 +101,26 @@ var SCENE_APP = {
 			SA.$keyLSource = SCENE_MODULE.getScene().keyL;
 			keyL = SA.$keyLSource;
 			SA.$keyL.attr('src', keyL);
+
+
+			SA.$audio[0].load();
+			SA.$video[0].load();
+
+			SA.$videoA[0].load();
+			SA.$videoS[0].load();
+			SA.$videoD[0].load();
+			SA.$videoF[0].load();
+			SA.$videoG[0].load();
+			SA.$videoH[0].load();
+			SA.$videoJ[0].load();
+			SA.$videoK[0].load();
+			SA.$videoL[0].load();
+
+			SA.$audio[0].currentTime = 0;
+			SA.$video[0].currentTime = 0;
+
+			SA.$audio[0].play();
+			SA.$video[0].play();
 
 		}();
 

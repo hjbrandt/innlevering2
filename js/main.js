@@ -15,12 +15,22 @@ $(function() {
       total += increment;
       var position = window.scrollY;
 
+      // reset scroll to create infinite scroll illusion
+      if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+        window.scrollTo(0, 1);
+      }
+
+      if ($(window).scrollTop() === 0) {
+        window.scrollTo(0, 1000000);
+      }
+
       if (position < newPosition) {
 
         move = 1;
 
         newPosition = position;
         getScene();
+
         // moveUp();
         console.log("you are scrolling UP!!!");
 
@@ -41,22 +51,38 @@ $(function() {
   // KEY
   $('body').on('keydown', function(e) {
 
+    // KEY PRESS
+    function removeTransition(e) {
+      if (e.propertyName !== 'transform')
+        return;
+      e.target.classList.remove('active'); //TODO fix feilmelding "Cannot read property"
+    }
+
+    var press = document.querySelector(`.key-press[data-key='${e.keyCode}']`);
+
+    press.classList.add('active');
+
+    var presser = Array.from(document.querySelectorAll('.key-press'));
+    presser.forEach(press => press.addEventListener('transitionend', removeTransition));
+
+    // KEY PLAY
     var key = document.querySelector(`.key[data-key='${e.keyCode}']`); // select key based on key class and data-key
     var audio = document.querySelector(`audio[data-key='${e.keyCode}']`);
     var video = document.querySelector(`video[data-key='${e.keyCode}']`);
 
-    if (!audio || !video) return; // stop the function from running if no audio or video on key
-    audio.currentTime = 0; // rewind before playing
+    if (!audio || !video)
+      return; // stop the function from running if no audio or video on key
+    audio.currentTime = 0;
     audio.volume = 0.5;
     audio.play();
 
     video.currentTime = 0;
     video.play();
 
-    $(key).addClass('playing'); // adds display block
+    $(key).addClass('playing');
 
     audio.onended = function() {
-      $(key).removeClass('playing'); // removes display block
+      $(key).removeClass('playing');
     };
 
   }); // END KEY
@@ -85,32 +111,27 @@ $(function() {
   setInterval(setDate, 1000);
   // END CLOCK
 
-  // START GET SCENE
+  // GET SCENE from scroll value
   function getScene() {
 
     if (total == 200) {
-      $('#scene')
-        .removeClass("scene-1")
-        .addClass("scene-2");
-        SCENE_APP.init();
+      $('#scene').removeClass("scene-1").addClass("scene-2");
+      SCENE_APP.init();
     }
     if (total == 400) {
-      $('#scene')
-        .removeClass("scene-2")
-        .addClass("scene-3");
-        SCENE_APP.init();
+      $('#scene').removeClass("scene-2").addClass("scene-3");
+      SCENE_APP.init();
     }
     if (total == 600) {
-      $('#scene')
-        .removeClass("scene-3")
-        .addClass("scene-4");
-        SCENE_APP.init();
+      $('#scene').removeClass("scene-3").addClass("scene-4");
+      SCENE_APP.init();
     }
     if (total == 800) {
-      $('#scene')
-        .removeClass("scene-4")
-        .addClass("scene-1");
-      total = 0;
+      $('#scene').removeClass("scene-4").addClass("scene-5");
+      SCENE_APP.init();
+    }
+    if (total == 1000) {
+      $('#scene').removeClass("scene-4").addClass("scene-5");
       SCENE_APP.init();
     }
 

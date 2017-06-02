@@ -68,7 +68,6 @@ section {
   position: relative;
   width: 100%;
   height: 100%;
-
 }
 
 .hand {
@@ -93,34 +92,62 @@ section {
 
 /*Keys*/
 
+.press-key {
+  position: fixed;
+  top: 0;
+  left: 1.3vw;
+  font-size: 1em;
+  letter-spacing: 2px;
+  opacity: .30;
+}
+
 .keys-gui {
   position: fixed;
-  top: 1vh;
+  top: 4vh;
   left: 1vw;
   display: flex;
   width: 33.333333333vw;
-  height: 10vh;
-  flex-wrap: wrap;
+  height: 50px;
   align-items: center;
 }
 
-.key-box {
+.key-press {
   width: 11.11111111%;
+  max-width: 20px;
   text-align: center;
+  border: 1px solid var(--gui);
+  border-radius: .5rem;
+  margin: .2rem;
+  padding: .5rem .5rem;
+  transition: all .07s ease;
+  opacity: 0.30;
+}
+
+.active {
+  transform: scale(1.1);
+  opacity: 0.90
+  border: 2px solid var(--gui);
 }
 
 /*Key press function*/
 
 .keys {
   position: fixed;
-  align-items: center;
-  justify-content: center;
   z-index: -1;
 }
 
 .key {
-  width: 30%;
+  width: 25%;
+  height: 25%;
   display: none;
+}
+
+#key-f kbd {
+  text-decoration: underline;
+}
+
+#key-j kbd {
+  text-decoration: underline;
 }
 
 .playing {
@@ -163,17 +190,21 @@ section {
 }
 
 .scene-1 {
-  background: linear-gradient(var(--1grad1), var(--1grad2));
+  background: linear-gradient(var(--1grad1), var(--1grad2), var(--1grad1));
 }
 
 .scene-2 {
-  background: linear-gradient(var(--2grad1), var(--2grad2));
+  background: linear-gradient(var(--2grad1), var(--2grad2), var(--2grad1));
 }
 
 .scene-3 {
-  background: linear-gradient(var(--3grad1), var(--3grad2));
+  background: linear-gradient(var(--3grad1), var(--3grad2), var(--3grad1));
 }
 
 .scene-4 {
-  background: linear-gradient(var(--4grad1), var(--4grad2));
+  background: linear-gradient(var(--4grad1), var(--4grad2), var(--4grad1));
+}
+
+.scene-5 {
+  background: white;
 }
