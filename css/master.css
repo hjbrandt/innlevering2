@@ -22,12 +22,17 @@ body {
   --sceneheight: 800vh;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 h1,
 h2,
 h3,
 h4,
 p,
 kbd {
+  font-family: 'Yantramanav', sans-serif;
   color: var(--gui);
 }
 
@@ -84,39 +89,33 @@ section {
   height: 70vh;
   left: calc(50% - 35vw);
   top: calc(50% - 35vh);
-  display: none;
 }
 
 /*Keys*/
 
 .keys-gui {
   position: fixed;
+  top: 1vh;
+  left: 1vw;
   display: flex;
-  flex-wrap: wrap;
-  width: 100vw;
-  height: 100vh;
+  width: 33.333333333vw;
+  height: 10vh;
   flex-wrap: wrap;
   align-items: center;
 }
 
 .key-box {
-  width: 33.3333333%;
+  width: 11.11111111%;
   text-align: center;
 }
-
 
 /*Key press function*/
 
 .keys {
   position: fixed;
-  display: flex;
-  flex-wrap: wrap;
-  width: 100vw;
-  height: 100vh;
   align-items: center;
   justify-content: center;
   z-index: -1;
-  border: 2px solid var(--gui);
 }
 
 .key {
@@ -132,25 +131,27 @@ section {
 
 .scroll-gui {
   position: fixed;
-  min-width: 100px;
-  bottom: 0;
-  left: calc(50% - 50px);
-}
-
-#scroll-icon {
-  padding: 10px;
-  margin-bottom: -40px;
+  display: flex;
+  flex-direction: column;
+  width: 12vw;
+  bottom: 3vh;
+  left: calc(50% - 6vw);
+  opacity: 0.30;
 }
 
 #scroll-text {
-  bottom: 0xp;
+  margin: 0;
+  margin-bottom: 1vh;
   left: 50%;
   text-align: center;
-  font-size: 0.75em;
-  text-transform: uppercase;
+  font-size: 1em;
   letter-spacing: 2px;
 }
 
+#scroll-icon {
+  max-height: 2.5vh;
+
+}
 
 /*END GUI*/
 
@@ -175,15 +176,4 @@ section {
 
 .scene-4 {
   background: linear-gradient(var(--4grad1), var(--4grad2));
-}
-
-
-/*Scene switching styling and function*/
-
-.slide-in {
-  display: none;
-  width: 100vw;
-  height: 100vh;
-  background: var(--1lightblue);
-  border: 3px solid var(--1lightgreen);
 }

@@ -17,12 +17,10 @@ var SCROLL_MODULE = (function(){
 		if (position < newPosition) {
 
 			newPosition = position;
-			console.log("you are scrolling UP");
 
 		} else {
 
 			newPosition = position;
-			console.log("you are scrolling DOWN");
 		}
 
 		});
