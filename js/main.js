@@ -5,7 +5,6 @@ $(function() {
   var total = 0;
   var newPosition = 0;
   var increment = 1;
-  var move = 0;
 
   // SCROLL
   var scroll = function() {
@@ -21,28 +20,34 @@ $(function() {
       }
 
       if ($(window).scrollTop() === 0) {
-        window.scrollTo(0, 1000000);
+        window.scrollTo(0, 10000);
       }
 
       if (position < newPosition) {
 
-        move = 1;
+        function moveUp() {
+          console.log("moveUp true");
+          return true;
+        }
 
         newPosition = position;
-        getScene();
 
-        // moveUp();
-        console.log("you are scrolling UP!!!");
+        getScene();
+        moveUp();
+        console.log("return moveUp");
 
       } else {
 
-        move = 2;
-
+        function moveDown() {
+          console.log("moveDown true");
+          return true;
+        }
         newPosition = position;
+
         getScene();
-        // moveDown();
-        console.log("you are scrolling DOWN");
-      }
+        moveDown();
+        console.log("return moveDown");
+      } // TODO Fix off by 1 error when scrolling up with keys 
 
     });
 

@@ -1,7 +1,6 @@
 /*Tag selection ect.*/
 
-html,
-body {
+html, body {
   margin: 0;
   background-color: var(--background);
 }
@@ -23,15 +22,10 @@ body {
 }
 
 ::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-p,
-kbd {
+h1, h2, h3, h4, p, kbd {
   font-family: 'Yantramanav', sans-serif;
   color: var(--gui);
 }
@@ -90,6 +84,7 @@ section {
   top: calc(50% - 35vh);
 }
 
+
 /*Keys*/
 
 .press-key {
@@ -125,9 +120,10 @@ section {
 
 .active {
   transform: scale(1.1);
-  opacity: 0.90
+  opacity: 0.90;
   border: 2px solid var(--gui);
 }
+
 
 /*Key press function*/
 
@@ -154,6 +150,7 @@ section {
   display: block;
 }
 
+
 /*Scroll*/
 
 .scroll-gui {
@@ -177,8 +174,8 @@ section {
 
 #scroll-icon {
   max-height: 2.5vh;
-
 }
+
 
 /*END GUI*/
 
