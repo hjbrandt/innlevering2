@@ -18,21 +18,17 @@
   <!-- START Fixed overlay -->
   <div id="overlay">
     <!-- Absolute GUI -->
-    <div class="gui">
-      <div class="clock-gui">
+    <div id="gui">
+      <div class="clock-gui gui">
         <div class="clock-face">
           <div class="hand hour-hand"></div>
           <div class="hand minutes-hand"></div>
           <div class="hand second-hand"></div>
         </div>
       </div>
-
-      <video class="scene-video" id="video" autoplay loop>
-        <source id="animation" src="" type="video/webm">
-      </video>
-
-      <div class="keys-gui">
-        <p class="press-key">press key</p>
+      <!-- KEY BUTTONS -->
+      <div class="keys-gui gui">
+        <p class="press-key gui">press keys</p>
         <div data-key="65" class="key-press" id="key-a">
           <kbd>A</kbd>
         </div>
@@ -61,12 +57,22 @@
           <kbd>L</kbd>
         </div>
       </div>
-      <div class="scroll-gui">
+      <!-- SCROLL GUIDE -->
+      <div class="scroll-gui gui">
         <p id="scroll-text">scroll to explore</p>
         <img id="scroll-icon" src="media/img/gui/piler.svg" alt="scroll icon">
       </div>
+      <!-- CONTROLS -->
+      <div class="controls gui">
+        <label for="opacity"></label>
+        <input type="range" name="opacity" min="0.1" max="0.9" value=".30" step="0.05">
+      </div>
+      <!-- SCENE animation placeholder -->
+      <video class="scene-video" id="video" autoplay loop>
+        <source id="animation" src="" type="video/webm">
+      </video>
     </div>
-    <!-- Fixed Keys with percentages-->
+    <!-- KEY animation placeholders-->
     <div class="keys">
       <div data-key="65" class="key key-a">
         <video data-key="65" class="key-video" id="videoA">
@@ -116,11 +122,11 @@
     </div>
   </div>
   <!-- END fixed overlay -->
-  <!-- Scenes -->
+  <!-- Scene background placeholder -->
   <section class="scene scene-1" id="scene">
 
   </section>
-  <!-- Audio files -->
+  <!-- KEY audio files -->
   <audio data-key="65" src="media/audio/key/ambulanse.mp3"></audio>
   <audio data-key="83" src="media/audio/key/brems.wav"></audio>
   <audio data-key="68" src="media/audio/key/dor.wav"></audio>
@@ -130,12 +136,11 @@
   <audio data-key="74" src="media/audio/key/melding.wav"></audio>
   <audio data-key="75" src="media/audio/key/motorsykkel.wav"></audio>
   <audio data-key="76" src="media/audio/key/tut.wav"></audio>
-
+  <!-- SCENE sound placeholder -->
   <audio class="scene-audio" id="audio" autoplay loop>
     <source id="sound" src="" type="audio/mpeg">
   </audio>
 
-  <!-- Video files -->
   <!-- JavaScripts -->
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
   <script src="js/SCENE_MODULE.js"></script>

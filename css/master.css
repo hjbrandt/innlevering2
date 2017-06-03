@@ -7,7 +7,7 @@ html, body {
 
 :root {
   /*COLORS*/
-  --gui: #fff;
+  --guiColor: #fff;
   --background: #5d5d5d;
   --1grad1: #C72064;
   --1grad2: #6350d3;
@@ -19,6 +19,8 @@ html, body {
   --4grad2: #E9edbc;
   /*ATTRIBUTES*/
   --sceneheight: 800vh;
+  --blur: 0px;
+  --guiOpacity: 0.70;
 }
 
 ::-webkit-scrollbar {
@@ -27,7 +29,7 @@ html, body {
 
 h1, h2, h3, h4, p, kbd {
   font-family: 'Yantramanav', sans-serif;
-  color: var(--gui);
+  color: var(--guiColor);
 }
 
 section {
@@ -38,13 +40,21 @@ section {
 
 /*Overlay and GUI styling*/
 
-#overlay {
+.overlay {
   position: fixed;
   height: 100vh;
   z-index: auto;
-  opacity: 1;
 }
 
+.up {
+  top: 100px;
+  transition: all 1.07s ease;
+}
+
+.down {
+  bottom: 100px;
+  transition: all 1.07s ease;
+}
 
 /*Clock*/
 
@@ -54,20 +64,23 @@ section {
   right: 10px;
   width: 3rem;
   height: 3rem;
-  border: 2px solid var(--gui);
+  border: 2px solid var(--guiColor);
   border-radius: 50%;
+  opacity: var(--guiOpacity);
+
 }
 
 .clock-face {
   position: relative;
   width: 100%;
   height: 100%;
+
 }
 
 .hand {
   width: 50%;
   height: 2px;
-  background: var(--gui);
+  background: var(--guiColor);
   position: absolute;
   top: 50%;
   transform-origin: 100%;
@@ -93,7 +106,7 @@ section {
   left: 1.3vw;
   font-size: 1em;
   letter-spacing: 2px;
-  opacity: .30;
+  opacity: var(--guiOpacity);
 }
 
 .keys-gui {
@@ -110,18 +123,18 @@ section {
   width: 11.11111111%;
   max-width: 20px;
   text-align: center;
-  border: 1px solid var(--gui);
+  border: 1px solid var(--guiColor);
   border-radius: .5rem;
   margin: .2rem;
   padding: .5rem .5rem;
   transition: all .07s ease;
-  opacity: 0.30;
+  opacity: var(--guiOpacity);
 }
 
 .active {
   transform: scale(1.1);
   opacity: 0.90;
-  border: 2px solid var(--gui);
+  border: 2px solid var(--guiColor);
 }
 
 
@@ -150,6 +163,15 @@ section {
   display: block;
 }
 
+/*Controls*/
+
+.controls {
+  position: fixed;
+  left: 3vw;
+  bottom: 3vh;
+
+}
+
 
 /*Scroll*/
 
@@ -157,10 +179,9 @@ section {
   position: fixed;
   display: flex;
   flex-direction: column;
-  width: 12vw;
+  min-width: 140px;
   bottom: 3vh;
   left: calc(50% - 6vw);
-  opacity: 0.30;
 }
 
 #scroll-text {
@@ -170,10 +191,12 @@ section {
   text-align: center;
   font-size: 1em;
   letter-spacing: 2px;
+  opacity: var(--guiOpacity);
 }
 
 #scroll-icon {
   max-height: 2.5vh;
+  opacity: var(--guiOpacity);
 }
 
 
@@ -204,4 +227,31 @@ section {
 
 .scene-5 {
   background: white;
+}
+
+
+/*PHONE & TABLET*/
+
+@media screen and (max-width: 350px) {
+    .keys-gui {
+      width: 98%;
+    }
+ 
+    .clock-gui {
+      top: calc(30px + 8%);
+    }
+@media screen and (max-width: 800px) {
+    .controls {
+      left: 50%;
+    }
+
+}
+@media screen and (max-heighth: 800px) {
+    .keys-gui {
+      width: 98%;
+    }
+ 
+    .clock-gui {
+      top: calc(30px + 8%);
+    }
 }

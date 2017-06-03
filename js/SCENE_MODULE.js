@@ -76,7 +76,7 @@ var SCENE_MODULE = (function() {
       return scenesJSON[3];
     }
     if ($('#scene').hasClass('scene-5')) {
-      return scenesJSON[4];
+      return scenesJSON[0];
     }
   }; // END getScene
 

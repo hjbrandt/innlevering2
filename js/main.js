@@ -7,6 +7,17 @@ $(function() {
   var increment = 1;
 
   // SCROLL
+
+  function moveUp() {
+    $('.gui');
+    console.log("animate UP here");
+  }
+
+  function moveDown() {
+    $('.gui');
+    console.log("animate UP here");
+  }
+
   var scroll = function() {
 
     $(window).on('scroll', function() {
@@ -16,7 +27,7 @@ $(function() {
 
       // reset scroll to create infinite scroll illusion
       if ($(window).scrollTop() + $(window).height() == $(document).height()) {
-        window.scrollTo(0, 0);
+        window.scrollTo(0, 1);
       }
 
       if ($(window).scrollTop() === 0) {
@@ -25,28 +36,16 @@ $(function() {
 
       if (position < newPosition) {
 
-        function moveUp() {
-          console.log("moveUp true");
-          return true;
-        }
-
         newPosition = position;
-
-        getScene();
         moveUp();
-        console.log("return moveUp");
+        getScene();
 
       } else {
 
-        function moveDown() {
-          console.log("moveDown true");
-          return true;
-        }
         newPosition = position;
-
         getScene();
         moveDown();
-        console.log("return moveDown");
+
       }
 
     });
@@ -69,10 +68,10 @@ $(function() {
 
     press.classList.add('active');
 
-    var presser = Array.from(document.querySelectorAll('.key-press'));
-    presser.forEach(press => press.addEventListener('transitionend', removeTransition));
+    var pressed = Array.from(document.querySelectorAll('.key-press'));
+    pressed.forEach(press => press.addEventListener('transitionend', removeTransition));
 
-    // KEY PLAY
+    // KEY PLAY SOUND & VIDEO
     var key = document.querySelector(`.key[data-key='${e.keyCode}']`); // select key based on key class and data-key
     var audio = document.querySelector(`audio[data-key='${e.keyCode}']`);
     var video = document.querySelector(`video[data-key='${e.keyCode}']`);
@@ -87,9 +86,11 @@ $(function() {
     video.play();
 
     $(key).addClass('playing');
+      console.log('addClass key');
 
     audio.onended = function() {
       $(key).removeClass('playing');
+      console.log('removeClass key');
     };
 
   }); // END KEY
@@ -143,5 +144,13 @@ $(function() {
     }
 
   } // END getScene
+
+  // START Gui controls
+  $('.controls input').on('mousemove', function(e) {
+
+    var data = this.dataset.sizing || '';
+
+    $('.gui').css({'opacity': this.value + data });
+  });
 
 }());
