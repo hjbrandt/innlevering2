@@ -20,7 +20,8 @@ html, body {
   /*ATTRIBUTES*/
   --sceneheight: 800vh;
   --blur: 0px;
-  --guiOpacity: 0.70;
+  --guiOpacity: 0.50;
+  --guiIndex: 1;
 }
 
 ::-webkit-scrollbar {
@@ -43,7 +44,6 @@ section {
 .overlay {
   position: fixed;
   height: 100vh;
-  z-index: auto;
 }
 
 .up {
@@ -60,8 +60,8 @@ section {
 
 .clock-gui {
   position: fixed;
-  top: 10px;
-  right: 10px;
+  margin-top: 27px;
+  right: calc(5px + 3vw);
   width: 3rem;
   height: 3rem;
   border: 2px solid var(--guiColor);
@@ -95,6 +95,7 @@ section {
   height: 70vh;
   left: calc(50% - 35vw);
   top: calc(50% - 35vh);
+  z-index: 1;
 }
 
 
@@ -102,7 +103,8 @@ section {
 
 .press-key {
   position: fixed;
-  top: 0;
+  margin: 0;
+  top: 1.5vh;
   left: 1.3vw;
   font-size: 1em;
   letter-spacing: 2px;
@@ -111,7 +113,7 @@ section {
 
 .keys-gui {
   position: fixed;
-  top: 4vh;
+  top: calc(8px + 2.5vh);
   left: 1vw;
   display: flex;
   width: 33.333333333vw;
@@ -142,13 +144,14 @@ section {
 
 .keys {
   position: fixed;
-  z-index: -1;
+  z-index: 2;
 }
 
 .key {
   width: 25%;
   height: 25%;
   display: none;
+  z-index: 2;
 }
 
 #key-f kbd {
@@ -168,7 +171,7 @@ section {
 .controls {
   position: fixed;
   left: 3vw;
-  bottom: 3vh;
+  bottom: 2.5vh;
 
 }
 
@@ -181,7 +184,7 @@ section {
   flex-direction: column;
   min-width: 140px;
   bottom: 3vh;
-  left: calc(50% - 6vw);
+  left: calc(50% - 70px);
 }
 
 #scroll-text {
@@ -189,7 +192,7 @@ section {
   margin-bottom: 1vh;
   left: 50%;
   text-align: center;
-  font-size: 1em;
+  font-size: calc(1rem + .2vw);
   letter-spacing: 2px;
   opacity: var(--guiOpacity);
 }
@@ -197,6 +200,21 @@ section {
 #scroll-icon {
   max-height: 2.5vh;
   opacity: var(--guiOpacity);
+}
+
+#slider{
+  border-width: 1px;
+  border-style: solid;
+  border-color: #333 #333 #777 #333;
+  border-radius: 25px;
+  width: 100px;
+  position: absolute;
+  height: 13px;
+  background-color: #8e8d8d;
+  background: url('../images/bg-track.png') repeat top left;
+  box-shadow: inset 0 1px 5px 0px rgba(0, 0, 0, .5), 
+           0 1px 0 0px rgba(250, 250, 250, .5);
+  left: 20px;
 }
 
 
@@ -232,17 +250,24 @@ section {
 
 /*PHONE & TABLET*/
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 420px) {
     .keys-gui {
       width: 98%;
     }
- 
-    .clock-gui {
-      top: calc(30px + 8%);
-    }
-@media screen and (max-width: 800px) {
     .controls {
-      left: 50%;
+      left: calc(50% - 65px);
+    }
+    .clock-gui {
+      margin-top: 5px;
+      top: calc(20px + 8vh);
+    }
+    .scroll-gui {
+      bottom: 8vh;
+    }
+
+@media screen and (max-width: 980px) {
+    .controls {
+      left: calc(50% - 50px);
     }
 
 }

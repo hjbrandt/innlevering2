@@ -3,7 +3,7 @@ var SCENE_MODULE = (function() {
   var scenesJSON = [
 
     {
-      "scene": "1",
+      "scene": "Day",
       "sound": "media/audio/sound1.mp3",
       "animation": "media/img/scene1.webm",
       "keyA": "media/img/key1/ambulanse.webm",
@@ -16,7 +16,7 @@ var SCENE_MODULE = (function() {
       "keyK": "media/img/key1/motorsykkel.webm",
       "keyL": "media/img/key1/tut.webm"
     }, {
-      "scene": "2",
+      "scene": "Normal",
       "sound": "media/audio/sound2.mp3",
       "animation": "media/img/scene2.webm",
       "keyA": "media/img/key2/ambulanse.webm",
@@ -29,7 +29,7 @@ var SCENE_MODULE = (function() {
       "keyK": "media/img/key2/motorsykkel.webm",
       "keyL": "media/img/key2/tut.webm"
     }, {
-      "scene": "3",
+      "scene": "Lucid",
       "sound": "media/audio/sound3.mp3",
       "animation": "media/img/scene3.webm",
       "keyA": "media/img/key3/ambulanse.webm",
@@ -42,7 +42,7 @@ var SCENE_MODULE = (function() {
       "keyK": "media/img/key3/motorsykkel.webm",
       "keyL": "media/img/key3/tut.webm"
     }, {
-      "scene": "4",
+      "scene": "Oneirogenic",
       "sound": "media/audio/sound4.mp3",
       "animation": "media/img/scene4.webm",
       "keyA": "media/img/key4/ambulanse.webm",
@@ -55,7 +55,11 @@ var SCENE_MODULE = (function() {
       "keyK": "media/img/key4/motorsykkel.webm",
       "keyL": "media/img/key4/tut.webm"
     }, {
-      "scene": "5",
+      "scene": "REM",
+      "sound": "media/audio/sound5.mp3",
+      "animation": "media/img/scene5.webm"
+    }, {
+      "scene": "Nightmare",
       "sound": "media/audio/sound5.mp3",
       "animation": "media/img/scene5.webm"
     }
@@ -74,9 +78,6 @@ var SCENE_MODULE = (function() {
     }
     if ($('#scene').hasClass('scene-4')) {
       return scenesJSON[3];
-    }
-    if ($('#scene').hasClass('scene-5')) {
-      return scenesJSON[0];
     }
   }; // END getScene
 

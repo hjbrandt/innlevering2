@@ -34,6 +34,10 @@ $(function() {
         window.scrollTo(0, document.body.scrollHeight - 1);
       }
 
+      if (total == 1000) {
+        total = 0;
+      }
+
       if (position < newPosition) {
 
         newPosition = position;
@@ -135,12 +139,9 @@ $(function() {
       SCENE_APP.init();
     }
     if (total == 800) {
-      $('#scene').removeClass("scene-4").addClass("scene-5");
+      $('#scene').removeClass("scene-4").addClass("scene-1");
       SCENE_APP.init();
-    }
-    if (total == 1000) {
-      $('#scene').removeClass("scene-4").addClass("scene-5");
-      SCENE_APP.init();
+      total = 0;
     }
 
   } // END getScene
@@ -152,5 +153,13 @@ $(function() {
 
     $('.gui').css({'opacity': this.value + data });
   });
+
+  $(function() {
+    $('#slider').slider();
+  });
+    slider.slider({
+      range: "min",
+      valaue: 50,
+    });
 
 }());
