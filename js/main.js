@@ -16,11 +16,11 @@ $(function() {
 
       // reset scroll to create infinite scroll illusion
       if ($(window).scrollTop() + $(window).height() == $(document).height()) {
-        window.scrollTo(0, 1);
+        window.scrollTo(0, 0);
       }
 
       if ($(window).scrollTop() === 0) {
-        window.scrollTo(0, 10000);
+        window.scrollTo(0, document.body.scrollHeight - 1);
       }
 
       if (position < newPosition) {
@@ -47,7 +47,7 @@ $(function() {
         getScene();
         moveDown();
         console.log("return moveDown");
-      } // TODO Fix off by 1 error when scrolling up with keys 
+      }
 
     });
 
