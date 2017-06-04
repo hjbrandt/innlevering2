@@ -186,7 +186,7 @@ $(function() {
   // START Gui controls
   $('.controls input').on('mousemove', function(e) {
 
-    var data = this.dataset.sizing || '';
+    var data = this.dataset.sizing || ''; // makes the function scalable to other units
 
     $('.gui').css({'opacity': this.value + data });
   });

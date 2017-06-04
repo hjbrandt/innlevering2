@@ -54,14 +54,6 @@ var SCENE_MODULE = (function() {
       "keyJ": "media/img/key4/melding.webm",
       "keyK": "media/img/key4/motorsykkel.webm",
       "keyL": "media/img/key4/tut.webm"
-    }, {
-      "scene": "REM",
-      "sound": "media/audio/sound5.mp3",
-      "animation": "media/img/scene5.webm"
-    }, {
-      "scene": "Nightmare",
-      "sound": "media/audio/sound5.mp3",
-      "animation": "media/img/scene5.webm"
     }
   ];
 
