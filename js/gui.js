@@ -1,8 +1,6 @@
 $(function() {
-  'use strict';
-  console.log('gui.js is loaded');
+  SCENE_APP.init();
 
-  // CLOCK
   var secondHand = document.querySelector('.second-hand');
   var minuteHand = document.querySelector('.minutes-hand');
   var hourHand = document.querySelector('.hour-hand');
@@ -24,6 +22,12 @@ $(function() {
     hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
   }
   setInterval(setDate, 1000);
-  // END CLOCK
 
-});
+  $('.controls input').on('mousemove', function(e) {
+
+    var data = this.dataset.sizing || ''; // makes the function scalable to other units
+
+    $('.gui').css({ 'opacity': this.value + data });
+  });
+
+}());

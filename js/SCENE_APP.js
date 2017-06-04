@@ -30,34 +30,34 @@ var SCENE_APP = {
     var setHTMLObjects = function() {
       SA.$audio = $('#audio');
       SA.$sound = $('#sound');
-      
+
       SA.$video = $('#video');
       SA.$animation = $('#animation');
 
       SA.$videoA = $('#videoA');
       SA.$keyA = $('#keyA');
-      
+
       SA.$videoS = $('#videoS');
       SA.$keyS = $('#keyS');
-      
+
       SA.$videoD = $('#videoD');
       SA.$keyD = $('#keyD');
-      
+
       SA.$videoF = $('#videoF');
       SA.$keyF = $('#keyF');
-      
+
       SA.$videoG = $('#videoG');
       SA.$keyG = $('#keyG');
-      
+
       SA.$videoH = $('#videoH');
       SA.$keyH = $('#keyH');
-      
+
       SA.$videoJ = $('#videoJ');
       SA.$keyJ = $('#keyJ');
-      
+
       SA.$videoK = $('#videoK');
       SA.$keyK = $('#keyK');
-      
+
       SA.$videoL = $('#videoL');
       SA.$keyL = $('#keyL');
 

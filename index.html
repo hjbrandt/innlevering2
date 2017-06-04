@@ -7,11 +7,12 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
   <link href="https://fonts.googleapis.com/css?family=Yantramanav" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css/normalize.css">
   <link rel="stylesheet" href="css/master.css">
+  <link rel="icon" href="media/img/gui/favicon.ico" type="image/x-icon">
   <!-- Title and favicon -->
-  <title>DRØMMER</title>
+  <title>linear dream</title>
 </head>
 
 <body>
@@ -70,7 +71,6 @@
     <video class="scene-video" id="video" autoplay loop>
       <source id="animation" src="" type="video/webm">
     </video>
-    
     <!-- START GUI -->
     <div class="clock-gui gui">
       <div class="clock-face">
@@ -111,7 +111,6 @@
       </div>
     </div>
     <!-- END key-gui class -->
-
     <!-- scroll guide gui -->
     <div class="scroll-gui gui">
       <p id="scroll-text">scroll to explore</p>
@@ -122,44 +121,40 @@
     <div class="controls gui">
       <label for="opacity"></label>
       <input type="range" name="opacity" min="0.1" max="0.9" value=".5" step="0.05">
-    <!-- volume -->
+      <!-- volume -->
       <!-- <section>
         <span class="tooltip"></span> 
         <div id="slider"></div>
         <span class="volume"></span>
       </section>
     </div> -->
-    <!-- END GUI -->
-  </div>
-  <!-- END fixed overlay -->
-
-  <!-- Scene placeholder -->
-  <section class="scene scene-1" id="scene">
-
-  </section>
-  <!-- KEY audio files -->
-  <audio data-key="65" src="media/audio/key/ambulanse.mp3"></audio>
-  <audio data-key="83" src="media/audio/key/brems.wav"></audio>
-  <audio data-key="68" src="media/audio/key/dor.wav"></audio>
-  <audio data-key="70" src="media/audio/key/hund.wav"></audio>
-  <audio data-key="71" src="media/audio/key/krake.wav"></audio>
-  <audio data-key="72" src="media/audio/key/make.wav"></audio>
-  <audio data-key="74" src="media/audio/key/melding.wav"></audio>
-  <audio data-key="75" src="media/audio/key/motorsykkel.wav"></audio>
-  <audio data-key="76" src="media/audio/key/tut.wav"></audio>
-  <!-- SCENE sound placeholder -->
-  <audio class="scene-audio audio" id="audio" autoplay loop>
-    <source id="sound" src="" type="audio/mpeg">
-  </audio>
-
-  <!-- JavaScripts -->
-<!--   <script src="node_modules/jquery-ui/jquery-ui.min.js"></script>
-  <script src="node_modules/jquery-ui/jquery-ui.min.css"></script> -->
-  <script src="node_modules/jquery/dist/jquery.min.js"></script>
-  <script src="js/SCENE_MODULE.js"></script>
-  <script src="js/SCENE_APP.js"></script>
-  <script src="js/main.js"></script>
-
+      <!-- END GUI -->
+    </div>
+    <!-- END fixed overlay -->
+    <!-- Scene placeholder -->
+    <section class="scene scene-1" id="scene">
+    <!-- SCENE sound placeholder -->
+    <audio class="scene-audio audio" id="audio" autoplay loop>
+      <source id="sound" src="" type="audio/mpeg">
+    </audio>
+    </section>
+    <!-- KEY audio files -->
+    <audio data-key="65" src="media/audio/key/ambulanse.mp3"></audio>
+    <audio data-key="83" src="media/audio/key/brems.wav"></audio>
+    <audio data-key="68" src="media/audio/key/dor.wav"></audio>
+    <audio data-key="70" src="media/audio/key/hund.wav"></audio>
+    <audio data-key="71" src="media/audio/key/krake.wav"></audio>
+    <audio data-key="72" src="media/audio/key/make.wav"></audio>
+    <audio data-key="74" src="media/audio/key/melding.wav"></audio>
+    <audio data-key="75" src="media/audio/key/motorsykkel.wav"></audio>
+    <audio data-key="76" src="media/audio/key/tut.wav"></audio>
+    <!-- JavaScripts -->
+    <script src="js/jquery/jquery.min.js"></script>
+    <script src="js/SCENE_MODULE.js"></script>
+    <script src="js/SCENE_APP.js"></script>
+    <script src="js/gui.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/key.js"></script>
 </body>
 
 </html>

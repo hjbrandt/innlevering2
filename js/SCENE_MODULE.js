@@ -73,6 +73,6 @@ var SCENE_MODULE = (function() {
     }
   }; // END getScene
 
-  return {getScene: getScene}; // END getScene
+  return { getScene: getScene }; // END getScene
 
 }());
