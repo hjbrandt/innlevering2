@@ -153,7 +153,6 @@ section {
   width: 20%;
   height: 20%;
   z-index: 1;
-  /*border: 1px solid maroon;*/
   display: none;
 }
 .playing {
@@ -161,7 +160,7 @@ section {
 }
 
 .key-a {
-  top: 7vh;
+  top: 8vh;
   left: 8vw;
 }
 .key-s {
