@@ -17,7 +17,7 @@
 <body>
   <!-- START Fixed overlay -->
   <div id="overlay">
-    <!-- Absolute GUI -->
+    <!-- GUI -->
     <div id="gui">
       <div class="clock-gui gui">
         <div class="clock-face">
@@ -28,7 +28,7 @@
       </div>
       <!-- KEY BUTTONS -->
       <div class="keys-gui gui">
-        <p class="press-key gui">press keys</p>
+        <p class="press-key gui">press sound keys</p>
         <div data-key="65" class="key-press" id="key-a">
           <kbd>A</kbd>
         </div>
@@ -57,25 +57,28 @@
           <kbd>L</kbd>
         </div>
       </div>
-      <!-- SCROLL GUIDE -->
+      <!-- SCROLL GUIDE GUI -->
       <div class="scroll-gui gui">
         <p id="scroll-text">scroll to explore</p>
         <img id="scroll-icon" src="media/img/gui/piler.svg" alt="scroll icon">
       </div>
-      <!-- CONTROLS -->
+      <!-- VOLUME AND OPACITY CONTROLS -->
+      <!-- opacity -->
       <div class="controls gui">
         <label for="opacity"></label>
-        <input type="range" name="opacity" min="0.1" max="0.9" value=".50" step="0.05">
-        <!-- SLIDER -->
-        <section> 
+        <input type="range" name="opacity" min="0.1" max="0.9" value=".5" step="0.05">
+      <!-- volume -->
+      <!--         <section> 
           <span class="tooltip"></span> 
           <div id="slider"></div>
           <span class="volume"></span>
         </section>
-      </div>
+      </div> -->
     </div>
+    <!-- END volume and opacity -->
+
     <!-- KEY animation placeholders-->
-    <div class="keys">
+    <div class="keys gui">
       <div data-key="65" class="key key-a">
         <video data-key="65" class="key-video" id="videoA">
           <source id="keyA" src="" type="video/webm"> Your browser does not support the video tag.
@@ -122,13 +125,14 @@
         </video>
       </div>
       <!-- SCENE animation placeholder -->
-      <video class="scene-video" id="video" autoplay loop>
-        <source id="animation" src="" type="video/webm">
-      </video>
     </div>
+    <video class="scene-video gui" id="video" autoplay loop>
+      <source id="animation" src="" type="video/webm">
+    </video>
   </div>
   <!-- END fixed overlay -->
-  <!-- Scene background placeholder -->
+
+  <!-- Scene placeholder -->
   <section class="scene scene-1" id="scene">
 
   </section>
@@ -148,8 +152,9 @@
   </audio>
 
   <!-- JavaScripts -->
+<!--   <script src="node_modules/jquery-ui/jquery-ui.min.js"></script>
+  <script src="node_modules/jquery-ui/jquery-ui.min.css"></script> -->
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
-  <script src="node_modules/jquery-ui/build/release.js"></script>
   <script src="js/SCENE_MODULE.js"></script>
   <script src="js/SCENE_APP.js"></script>
   <script src="js/main.js"></script>

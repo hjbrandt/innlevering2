@@ -21,11 +21,11 @@ html, body {
   --sceneheight: 800vh;
   --blur: 0px;
   --guiOpacity: 0.50;
-  --guiIndex: 1;
+  --guiIndex: 2;
 }
 
 ::-webkit-scrollbar {
-  display: none;
+  /*display: none;*/
 }
 
 h1, h2, h3, h4, p, kbd {
@@ -35,7 +35,7 @@ h1, h2, h3, h4, p, kbd {
 
 section {
   display: flex;
-  z-index: -1;
+  z-index: 21;
 }
 
 
@@ -54,6 +54,14 @@ section {
 .down {
   bottom: 100px;
   transition: all 1.07s ease;
+}
+
+.gui {
+  /*display: none;*/
+}
+
+#gui {
+  z-index: 2;
 }
 
 /*Clock*/
@@ -89,17 +97,7 @@ section {
   transition-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
-.scene-video {
-  position: fixed;
-  width: 70vw;
-  height: 70vh;
-  left: calc(50% - 35vw);
-  top: calc(50% - 35vh);
-  z-index: 1;
-}
-
-
-/*Keys*/
+/* press sound keys GUI */
 
 .press-key {
   position: fixed;
@@ -134,24 +132,10 @@ section {
 }
 
 .active {
-  transform: scale(1.1);
+  transform: scale(1.05);
   opacity: 0.90;
-  border: 2px solid var(--guiColor);
-}
-
-
-/*Key press function*/
-
-.keys {
-  position: fixed;
-  z-index: 2;
-}
-
-.key {
-  width: 25%;
-  height: 25%;
-  display: none;
-  z-index: 2;
+  border: 1px solid var(--guiColor);
+  box-shadow: 0 0 5px var(--guiColor);
 }
 
 #key-f kbd {
@@ -162,11 +146,39 @@ section {
   text-decoration: underline;
 }
 
+/*Key press animations*/
+
+.keys {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  border: 2px solid green;
+
+}
+.key {
+  width: 15%;
+  height: 15%;
+  z-index: 1;
+  border: 2px solid maroon;
+  /*display: none;*/
+}
 .playing {
   display: block;
 }
 
-/*Controls*/
+.key .key-a {
+  top: 20px;
+  left: 20px;
+}
+
+.key-video {
+  width: 100%;
+  height: 100%;
+}
+
+
+/*VOLUME AND OPACITY Controls*/
 
 .controls {
   position: fixed;
@@ -175,8 +187,59 @@ section {
 
 }
 
+/*js UI*/
+.volume {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  right: -5px;
+  background: var(--guiColor) no-repeat 0 -50px;
+  position: absolute;
+  margin-top: -5px;
+}
 
-/*Scroll*/
+#slider{
+  border-width: 1px;
+  border-style: solid;
+  border-color: #333 #333 #777 #333;
+  border-radius: 25px;
+  width: 100px;
+  position: absolute;
+  height: 13px;
+  background-color: #8e8d8d;
+  background: url('../images/bg-track.png') repeat top left;
+  box-shadow: inset 0 1px 5px 0px rgba(0, 0, 0, .5), 
+           0 1px 0 0px rgba(250, 250, 250, .5);
+  left: 20px;
+}
+
+.ui-slider-handle {
+  position: absolute;
+  z-index: 2;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  background: var(--guiColor) no-repeat 50% 50%;
+  font-weight: bold;
+  color: #1C94C4;
+  outline: none;
+  top: -7px;
+  margin-left: -12px;
+}
+
+.ui-slider-range {
+  background: linear-gradient(top, #ffffff 0%,#eaeaea 100%);
+  position: absolute;
+  border: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 25px;
+}
+
+
+/*END volume and opacity controls*/
+
+/*Scroll GUI*/
 
 .scroll-gui {
   position: fixed;
@@ -200,26 +263,23 @@ section {
 #scroll-icon {
   max-height: 2.5vh;
   opacity: var(--guiOpacity);
+} /*END scroll gui*/
+
+/*ANIMATION placement and size*/
+
+.scene-video {
+  position: fixed;
+  width: 70vw;
+  height: 70vh;
+  left: calc(50% - 35vw);
+  top: calc(50% - 35vh);
+  z-index: 2;
 }
 
-#slider{
-  border-width: 1px;
-  border-style: solid;
-  border-color: #333 #333 #777 #333;
-  border-radius: 25px;
-  width: 100px;
-  position: absolute;
-  height: 13px;
-  background-color: #8e8d8d;
-  background: url('../images/bg-track.png') repeat top left;
-  box-shadow: inset 0 1px 5px 0px rgba(0, 0, 0, .5), 
-           0 1px 0 0px rgba(250, 250, 250, .5);
-  left: 20px;
+.key-a {
+  top: 10vw;
+  left: 10vw;
 }
-
-
-/*END GUI*/
-
 
 /*Scene length and setting*/
 
@@ -259,7 +319,7 @@ section {
     }
     .clock-gui {
       margin-top: 5px;
-      top: calc(20px + 8vh);
+      top: calc(45px + 4vh);
     }
     .scroll-gui {
       bottom: 8vh;
